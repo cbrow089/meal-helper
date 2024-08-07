@@ -11,7 +11,7 @@ This is an app to help new and aspiring chefs learn how to cook beginner level r
 
 * It's done when the website randomly chooses a meal within the restrictions of the users input and provides a picture and link to the full recipe. 
 
-* It's done when the website stores the user input into locol storage and displays the input in a new page with the chosen meal.  
+* It's done when the website stores the user input into local storage and displays the input in a new page with the chosen meal.  
 
 * It's done when a back button is displayed to clear the local storage and brings the user back to the origional input page. 
 
