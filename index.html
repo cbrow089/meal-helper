@@ -10,27 +10,44 @@
 </head>
 
 <body>
-  <header class="hero has-text-centered is-primary ">
+  <header class="hero has-text-centered has-background-primary-05">
     <div class="hero-body">
-      <p class="title is-1">Meal Helper</p>
-      <p class="subtitle">This is an app to help new and aspiring chefs learn how to cook beginner level recipes.</p>
+      <p class="title is-1 has-text-info-light">Meal Helper</p>
+      <p class="subtitle has-text-info-light">This is an app to help new and aspiring chefs learn how to cook beginner level recipes.</p>
     </div>
   </header>
 
   <section class="columns has-text-centered mx-0 my-0">
     <div class="column px-0 py-0" >
-      <section>
-        <img src = "https://upload.wikimedia.org/wikipedia/commons/b/bc/Pizza-oven.jpg" alt ="pizza oven image">
-        <img src = "https://upload.wikimedia.org/wikipedia/commons/5/5d/Achiote_paste_ingredients.jpg" alt ="spices image" height ="235px">
-        <img src = "https://upload.wikimedia.org/wikipedia/commons/2/2f/Culinary_fruits_front_view.jpg" alt ="fruit image">
+      <section class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src = "https://upload.wikimedia.org/wikipedia/commons/b/bc/Pizza-oven.jpg" alt ="pizza oven image">
+          </figure>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src = "https://upload.wikimedia.org/wikipedia/commons/5/5d/Achiote_paste_ingredients.jpg" alt ="spices image">
+          </figure>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src = "https://upload.wikimedia.org/wikipedia/commons/2/2f/Culinary_fruits_front_view.jpg" alt ="fruit image">
+          </figure>
+        </div>
       </section>
     </div>
 
-    <div class="column is-half" style="border: solid">
-      <section>
-        <h2 class="title is-3">Start Here!</h2>
+    <div class="column is-half has-background-info-light" style="border: solid; border-radius: 5%;">
+      <section style="display: flex; flex-direction:column; justify-content:space-between; height:90%">
+        <h2 class="title is-3 is-underlined">Start Here!</h2>
 
-        <div>Select Meal Type</div>
+        <div class="title is-4">Select Meal Type</div>
         <div class="control">
           <div class="select">
             <select id="meal-type" name="meal">
@@ -43,7 +60,7 @@
 
 
         <br>
-        <div>Select how much time you have available</div>
+        <div class="title is-4">Select how much time you have available</div>
         <div class="control">
           <div class="select">
             <select id="time" name="time-available">
@@ -56,7 +73,7 @@
 
 
         <br>
-        <div>Select any allergies or dietary restrictions</div>
+        <div class="title is-4">Select any allergies or dietary restrictions</div>
         <div class="control">
           <div class="select">
             <select id="allergies" name="allergies">
@@ -68,23 +85,40 @@
           </div>
         </div>
         <br>
-        <button class="button is-dark">Submit</button>
       </section>
+      <button class="button is-dark">Submit</button>
     </div>
     
     <div class="column px-0 py-0">
-      <section>
-        <img src = "https://upload.wikimedia.org/wikipedia/commons/f/f7/FruitArrangement.jpg" alt = "veggies image">
-        <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg/1280px-%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg" alt = "pasta picture">
-        <img src = "https://www.thespruceeats.com/thmb/b2I5egoUn6CBOKf7WgnbGRpW9GU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1128297159-9f2edd755c23451aad7d892fb7b5bca7.jpg" alt = "salad image">
-        
+      <section class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src = "https://upload.wikimedia.org/wikipedia/commons/f/f7/FruitArrangement.jpg" alt = "veggies image">
+          </figure>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg/1280px-%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg" alt = "pasta picture">
+          </figure>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src = "https://www.thespruceeats.com/thmb/b2I5egoUn6CBOKf7WgnbGRpW9GU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1128297159-9f2edd755c23451aad7d892fb7b5bca7.jpg" alt = "salad image">
+          </figure>
+        </div>
       </section>
     </div>
   </section>
 
-  <footer class="footer">
+  <footer class="footer has-background-primary-05">
     <div class="content has-text-centered">
-      <p><strong>Created by:</strong> Coleman Brown, Melanie Primpas, Tristian Perrotti</p>
+      <p class="has-text-info-light">Created by: Coleman Brown, Melanie Primpas, Tristan Perrotti</p>
     </div>
   </footer>
 
