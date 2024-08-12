@@ -7,6 +7,8 @@
   <title>Meal Helper!</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <script src="./assets/logic.js"></script>
+
 </head>
 
 <body>
@@ -17,7 +19,7 @@
     </div>
   </header>
 
-  <section class="columns has-text-centered mx-0 my-0">
+  <section class="columns has-text-centered mx-0 my-0 has-background-primary-05">
     <div class="column px-0 py-0" >
       <section class="card">
         <div class="card-image">
@@ -86,7 +88,7 @@
         </div>
         <br>
       </section>
-      <button class="button is-dark">Submit</button>
+      <button class="js-modal-trigger  button is-dark" data-target="modal-js-example">Submit</button>
     </div>
     
     <div class="column px-0 py-0">
@@ -122,6 +124,13 @@
     </div>
   </footer>
 
+  <div id="modal-js-example" class="modal">
+    <div class="modal-background"></div>
+  
+    <div class="modal-content title is-5 has-text-info-light has-text-centered"></div>
+  
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
 </body>
 
 </html>
