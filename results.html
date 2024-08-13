@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
 
 <head>
   <meta charset="utf-8">
@@ -7,6 +7,7 @@
   <title>Hello Bulma!</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
   <script src="./assets/logic.js"></script>
 </head>
 
@@ -33,21 +34,9 @@
   </header>
 
 <!--Recipe Cards-->
-<section class="columns">
-  <div class="column is-one-third">
-    <section class="card">
-      <div class="card-image">
-        <figure class="image is-4by3">
-            <!-- Recipe cards will be dynamically generated here -->
-        </figure>
-        <div class="recipeCardsSection">
-          <!-- Recipe cards will be dynamically generated here -->
-        </div>
-      </div>
-    </section>
-  </div>
-</section>
-
+<div class="columns is-centered is-multiline mt-2" id="recipeCardsSection">
+  <!-- Recipe cards will be dynamically generated here -->
+</div>
 
   <footer class="footer has-background-primary-05">
     <div class="content has-text-centered">
