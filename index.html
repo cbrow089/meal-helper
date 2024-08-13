@@ -11,32 +11,35 @@
 
 </head>
 
-<body>
-  <header class="hero has-text-centered has-background-primary-05">
+<body class="has-background-primary-05">
+  <header class="hero has-text-centered has-background-primary-05 mb-3">
     <div class="hero-body">
-      <p class="title is-1 has-text-info-light">Meal Helper</p>
-      <p class="subtitle has-text-info-light">This is an app to help new and aspiring chefs learn how to cook beginner level recipes.</p>
+      <div class="is-justify-content-center" style="display: flex;"><img src="./assets/mealhelperlogo1.png" width="100" style="display: inline" alt="logo">
+        <img src="./assets/title1.png" width="550" style="display: inline" alt="Meal Helper">
+      <img src="./assets/mealhelperlogo2.png" width="60" style="display: inline; object-fit: cover;" alt="logo">
+      </div>
+      <p class="subtitle has-text-info-light">----  Don't know where to start with cooking?  ----</p>
     </div>
   </header>
 
   <section class="columns has-text-centered mx-0 my-0 has-background-primary-05">
-    <div class="column px-0 py-0" >
-      <section class="card">
-        <div class="card-image">
+    <div class="column px-0 py-0 m-4" >
+      <section class="m-5" style="border: solid 1rem white; transform: rotate(-10deg)">
+        <div class="card-image" style="position: rotate(-45deg)">
           <figure class="image is-4by3">
             <img src = "https://upload.wikimedia.org/wikipedia/commons/b/bc/Pizza-oven.jpg" alt ="pizza oven image">
           </figure>
         </div>
       </section>
 
-      <section class="card">
+      <section class="m-5" style="border: solid 1rem white; transform: rotate(10deg)">
         <div class="card-image">
           <figure class="image is-4by3">
             <img src = "https://upload.wikimedia.org/wikipedia/commons/5/5d/Achiote_paste_ingredients.jpg" alt ="spices image">
           </figure>
         </div>
       </section>
-      <section class="card">
+      <section class="m-5" style="border: solid 1rem white; transform: rotate(-10deg)">
         <div class="card-image">
           <figure class="image is-4by3">
             <img src = "https://upload.wikimedia.org/wikipedia/commons/2/2f/Culinary_fruits_front_view.jpg" alt ="fruit image">
@@ -45,12 +48,12 @@
       </section>
     </div>
 
-    <div class="column is-half has-background-info-light" style="border: solid; border-radius: 5%;">
+    <div class="column is-half has-background-warning-light" style="border: solid; border-radius: 5%;">
       <section style="display: flex; flex-direction:column; justify-content:space-between; height:90%">
-        <h2 class="title is-3 is-underlined">Start Here!</h2>
-
-        <div class="title is-4">Select Meal Type</div>
-        <div class="control">
+        <section><img src="./assets/notepadholes.png"></section>
+        <h2 class="title is-3 is-underlined" style="margin: 0rem 0rem 1rem">Start Here!</h2>
+        <div class="title is-4" style="border-top: solid; border-color: rgb(31, 61, 85); margin: 0rem 0rem 1rem; padding-top: 1rem">Select Meal Type</div>
+        <div class="control" style="border-top: solid; border-color: rgb(31, 61, 85); margin: 0rem 0rem 1rem; padding-top: 1rem">
           <div class="select">
             <select id="meal-type" name="meal">
               <option value="breakfast">Breakfast</option>
@@ -61,9 +64,9 @@
         </div>
 
 
-        <br>
-        <div class="title is-4">Select how much time you have available</div>
-        <div class="control">
+
+        <div class="title is-4" style="border-top: solid; border-color: rgb(31, 61, 85); margin: 0rem 0rem 1rem; padding-top: 1rem">Select how much time you have available</div>
+        <div class="control" style="border-top: solid; border-color: rgb(31, 61, 85); margin: 0rem 0rem 1rem; padding-top: 1rem">
           <div class="select">
             <select id="time" name="time-available">
               <option value="time-low">30 minutes</option>
@@ -74,9 +77,8 @@
         </div>
 
 
-        <br>
-        <div class="title is-4">Select any allergies or dietary restrictions</div>
-        <div class="control">
+        <div class="title is-4" style="border-top: solid; border-color: rgb(31, 61, 85); margin: 0rem 0rem 1rem; padding-top: 1rem">Select any allergies or dietary restrictions</div>
+        <div class="control" style="border-top: solid; border-bottom: solid; border-color: rgb(31, 61, 85); margin: 0rem 0rem 1rem; padding: 1rem 0rem 1rem">
           <div class="select">
             <select id="allergies" name="allergies">
               <option value="no-allergy">None</option>
@@ -88,11 +90,11 @@
         </div>
         <br>
       </section>
-      <button class="js-modal-trigger  button is-dark" data-target="modal-js-example">Submit</button>
+      <button class="js-modal-trigger button is-dark" data-target="modal-js-example">Submit</button>
     </div>
     
-    <div class="column px-0 py-0">
-      <section class="card">
+    <div class="column px-0 py-0 m-4">
+      <section class="m-5" style="border: solid 1rem white; transform: rotate(10deg)">
         <div class="card-image">
           <figure class="image is-4by3">
             <img src = "https://upload.wikimedia.org/wikipedia/commons/f/f7/FruitArrangement.jpg" alt = "veggies image">
@@ -100,7 +102,7 @@
         </div>
       </section>
 
-      <section class="card">
+      <section class="m-5" style="border: solid 1rem white; transform: rotate(-10deg)">
         <div class="card-image">
           <figure class="image is-4by3">
             <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg/1280px-%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg" alt = "pasta picture">
@@ -108,7 +110,7 @@
         </div>
       </section>
 
-      <section class="card">
+      <section class="m-5" style="border: solid 1rem white; transform: rotate(10deg)">
         <div class="card-image">
           <figure class="image is-4by3">
             <img src = "https://www.thespruceeats.com/thmb/b2I5egoUn6CBOKf7WgnbGRpW9GU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1128297159-9f2edd755c23451aad7d892fb7b5bca7.jpg" alt = "salad image">
