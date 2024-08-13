@@ -186,6 +186,22 @@ const recipes = [
         mealType: 'lunch',
         allergies: ['no-allergy']
     },
+    {   // Quiche
+        image: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F9171022.jpg&w=160&q=60&c=sc&poi=auto&orient=true&h=90',
+        title: 'Quiche',
+        timeAvailable: '1 and a half hours',
+        description: 'A fluffy quiche that can add any summer vegetables to enjoy.',
+        mealType: 'breakfast',
+        allergies: ['no-allergy']
+    },
+    {   // Banana Bread
+        image: 'https://www.allrecipes.com/thmb/kldqT8aA_iZIVmpUlCzC1d6J8vU=/160x90/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/AR-15747-best-ever-banana-bread-DDMFS-3x4-3da596a9438c466ca421354588825e5b.jpg',
+        title: 'Banana Bread',
+        timeAvailable: '1 and a half hours',
+        description: 'This is a great banana bread recipe that is easy to make and tastes great.',
+        mealType: 'breakfast',
+        allergies: ['nut-allergy']
+    },
     // Add more recipes here
 ];
 
@@ -230,26 +246,38 @@ document.addEventListener('DOMContentLoaded', () => {
     
         // Check if any recipes match the filter criteria
         if (filteredRecipes.length > 0) {
-            const recipeCardsSection = document.querySelector('.recipeCardsSection');
+            const recipeCardsSection = document.querySelector('#recipeCardsSection');
             
             // Clear any existing recipe cards
             recipeCardsSection.innerHTML = '';
     
             // Loop through filtered recipes to create recipe cards
-            filteredRecipes.forEach(recipe => {
+            filteredRecipes.forEach((recipe, index) => {
                 const recipeCard = document.createElement('div');
-                recipeCard.classList.add('column', 'is-one-third');
+                recipeCard.classList.add('column','is-half','center');
+
+                if(filteredRecipes.length % 2 !== 0 && index === filteredRecipes.length-1) {
+                    recipeCard.classList.remove('is-half');
+                }
     
                 recipeCard.innerHTML = `
-                    <div>
-                        <img src="${recipe.image}" alt="${recipe.title}">
-                        <p class="title is-4" style="align-items: flex-start">${recipe.title}</p>
-                        <p class="title is-5" style="align-items: flex-end">${recipe.timeAvailable}</p>
-                        <p>${recipe.description}</p>
-                    </div>
+                    
+                        <div class="card recipe-card">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="${recipe.image}" alt="${recipe.title}">
+                                </figure>
+                                   
+                            </div>
+                                <p class="title is-4" style="align-items: flex-start">${recipe.title}</p>
+                                <p class="title is-5" style="align-items: flex-end">${recipe.timeAvailable}</p>
+                                <p>${recipe.description}</p>
+                        </div>
                 `;
     
                 recipeCardsSection.appendChild(recipeCard);
+
+
             });
         } else {
             console.error('No recipes match the filter criteria.');

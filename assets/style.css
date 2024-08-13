@@ -1,0 +1,15 @@
+.recipe-card{
+    width: 40rem;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.recipe-card-col {
+    display: flex;
+    justify-content: center;
+}
