@@ -251,7 +251,7 @@ const recipes = [
         description: 'This taco salad is a tasty twist on the conventional taco salad.',
         mealType: 'lunch',
         allergies: ['nut-free','no-allergy'],
-        link: 'https://www.allrecipes.com/recipe/244458/buttered-noodles/',
+        link: 'https://www.allrecipes.com/recipe/14253/taco-salad-i/',
     },
     {
         // Spicy Chicken Noodles
@@ -261,7 +261,7 @@ const recipes = [
         description: 'This spicy chicken noodle recipe is resturant quality. You can change up the recipe by adding any veggies you want!',
         mealType: 'lunch',
         allergies: ['gluten-free','no-allergy'],
-        link: 'https://www.allrecipes.com/recipe/244458/buttered-noodles/',
+        link: 'https://www.allrecipes.com/recipe/259480/spicy-chicken-noodles/',
     },
     {
         // Roasted Butternut Squash with Onions, Spinach, and Cranberries (vegan) (contains nuts)
@@ -351,7 +351,7 @@ const recipes = [
         description: 'Easy one pot meal, this cheesburger pasta recipe is low cost and high flavor!',
         mealType: 'dinner',
         allergies: ['nut-free','no-allergy'],
-        link: 'https://www.allrecipes.com/recipe/23431/to-die-for-fettuccine-alfredo/',
+        link: 'https://www.tamingtwins.com/cheeseburger-pasta/',
     },
     {
         // Roasted Butternut Squash Soup
