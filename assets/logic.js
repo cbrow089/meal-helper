@@ -44,12 +44,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Store the form data in local storage
                 localStorage.setItem('formData', JSON.stringify(formData));
                 console.log('Form data saved to local storage:', formData);
+                // Capitalize only the first letter of mealType
+                const capitalizedMealType = formData.mealType.charAt(0).toUpperCase() + formData.mealType.slice(1).toLowerCase();
 
                 // Update the modal content with the form data and question
                 $target.querySelector('.modal-content').innerHTML = `
                     <p>Are these choices correct?</p>
                     <br>
-                    <p>Meal Type: ${formData.mealType}</p>
+                    <p>Meal Type: ${capitalizedMealType}</p>
                     <br>
                     <p>Time Available: ${formData.timeAvailable}</p>
                     <br>
