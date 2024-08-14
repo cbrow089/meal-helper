@@ -44,8 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Store the form data in local storage
                 localStorage.setItem('formData', JSON.stringify(formData));
                 console.log('Form data saved to local storage:', formData);
+
                 // Capitalize only the first letter of mealType
                 const capitalizedMealType = formData.mealType.charAt(0).toUpperCase() + formData.mealType.slice(1).toLowerCase();
+                const capitalizedAllergies = formData.allergies.charAt(0).toUpperCase() + formData.allergies.slice(1).toLowerCase();
 
                 // Update the modal content with the form data and question
                 $target.querySelector('.modal-content').innerHTML = `
@@ -55,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <br>
                     <p>Time Available: ${formData.timeAvailable}</p>
                     <br>
-                    <p>Allergies: ${formData.allergies}</p>
+                    <p>Allergies: ${capitalizedAllergies}</p>
                     <br>
                     <button class="js-yes-button button is-success">Yes</button>
                     <button class="js-no-button button is-danger">No</button>
@@ -131,25 +133,19 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Retrieved form data from local storage:', savedFormData);
     
             if (savedFormData) {
-                const modalElement = document.getElementById('modal-js-example');
-                if (modalElement) {
-                    const modalContent = modalElement.querySelector('.modal-content');
-                    if (modalContent) {
-                        modalContent.innerHTML = `
-                            <p>Meal Type: ${savedFormData.mealType}</p>
-                            <p>Time Available: ${savedFormData.timeAvailable}</p>
-                            <p>Allergies: ${savedFormData.allergies}</p>
-                        `;
-                        openModal(modalElement);
-                    } else {
-                        console.error('.modal-content element not found in the document');
-                    }
-                } else {
-                    console.error('Modal element with ID "modal-js-example" not found in the document');
-                }
-            } else {
-                console.error('Form data is missing or invalid');
-            }
+    const modalElement = document.getElementById('modal-js-example');
+    if (modalElement) {
+        const modalContent = modalElement.querySelector('.modal-content');
+        if (modalContent) {
+            modalContent.innerHTML = `
+                <p>Meal Type: ${savedFormData.mealType}</p>
+                <p>Time Available: ${savedFormData.timeAvailable}</p>
+                <p>Allergies: ${savedFormData.allergies}</p>
+            `;
+            openModal(modalElement);
+        }
+    }
+}
         });
     });
 });
@@ -402,17 +398,18 @@ const recipes = [
 
 // Functions to get form data from local storage and display recipe cards
 document.addEventListener('DOMContentLoaded', () => {
+    
     function getFormData() {
         const storedFormData = localStorage.getItem('formData');
         if (storedFormData) {
             try {
                 return JSON.parse(storedFormData);
             } catch (error) {
-                console.error('Error parsing form data:', error);
+                console.log('Error parsing form data:', error);
                 return null;
             }
         } else {
-            console.error('Form data not found in local storage');
+            console.log('Form data not found in local storage');
             return null;
         }
     }
@@ -443,43 +440,43 @@ document.addEventListener('DOMContentLoaded', () => {
         if (filteredRecipes.length > 0) {
             const recipeCardsSection = document.querySelector('#recipeCardsSection');
             
-            // Clear any existing recipe cards
-            recipeCardsSection.innerHTML = '';
-    
-            // Loop through filtered recipes to create recipe cards
-            filteredRecipes.forEach((recipe, index) => {
-                const recipeCard = document.createElement('div');
-                recipeCard.classList.add('column','is-half','center');
+            if (recipeCardsSection) {
+                // Clear any existing recipe cards
+                recipeCardsSection.innerHTML = '';
+        
+                // Loop through filtered recipes to create recipe cards
+                filteredRecipes.forEach((recipe, index) => {
+                    const recipeCard = document.createElement('div');
+                    recipeCard.classList.add('column','is-half','center');
 
-                if(filteredRecipes.length % 2 !== 0 && index === filteredRecipes.length-1) {
-                    recipeCard.classList.remove('is-half');
-                }
-    
-                recipeCard.innerHTML = `
-                    
-                        <div class="card recipe-card">
-                            <div class="card-image">
-                                <figure class="image is-4by3">
-                                    <img src="${recipe.image}" alt="${recipe.title}">
-                                </figure>
-                                   
+                    if(filteredRecipes.length % 2 !== 0 && index === filteredRecipes.length-1) {
+                        recipeCard.classList.remove('is-half');
+                    }
+        
+                    recipeCard.innerHTML = `
+                        
+                            <div class="card recipe-card">
+                                <div class="card-image">
+                                    <figure class="image is-4by3">
+                                        <img src="${recipe.image}" alt="${recipe.title}">
+                                    </figure>
+                                    
+                                </div>
+                                    <p class="title is-4" style="align-items: flex-start">
+                                        <a href="${recipe.link}">${recipe.title}</a>
+                                    </p>
+                                    <p class="title is-5" style="align-items: flex-end">${recipe.timeAvailable}</p>
+                                    <p>${recipe.description}</p>
                             </div>
-                                <p class="title is-4" style="align-items: flex-start">
-                                    <a href="${recipe.link}">${recipe.title}</a>
-                                </p>
-                                <p class="title is-5" style="align-items: flex-end">${recipe.timeAvailable}</p>
-                                <p>${recipe.description}</p>
-                        </div>
-                `;
-    
-                recipeCardsSection.appendChild(recipeCard);
+                    `;
+        
+                    recipeCardsSection.appendChild(recipeCard);
 
 
-            });
+                });
         } else {
-            console.error('No recipes match the filter criteria.');
+            console.log('Recipe Cards Section not found in the document');
         }
-    } else {
-        console.error('Form data is missing or invalid');
+    }
     }
 });
