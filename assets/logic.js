@@ -463,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     
                                 </div>
                                     <p class="title is-4" style="align-items: flex-start">
-                                        <a href="${recipe.link}">${recipe.title}</a>
+                                        <a href="${recipe.link}" target = "_blank">${recipe.title}</a>
                                     </p>
                                     <p class="title is-5" style="align-items: flex-end">${recipe.timeAvailable}</p>
                                     <p>${recipe.description}</p>
